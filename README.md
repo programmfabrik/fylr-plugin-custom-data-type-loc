@@ -27,14 +27,14 @@ As defined in `manifest.yml` this datatype can be configured:
 * Which LOC-Schema is searched. Available schemas can be found [on the LOC site](https://id.loc.gov/search/).
     * Select a Scheme on the left side
     * Check the URL. It should look like this https://id.loc.gov/search/?q=cs:http://id.loc.gov/vocabulary/graphicMaterials
-    * Everything after http://id.loc.gov/ in the q parameter is the schema
+    * Everything after http://id.loc.gov/ in the q parameter is the schema. In this example the schema would be **vocabulary/graphicMaterials**
 
 * Limits the search to entries that are part of this schema. If not Schema is set, the plugin will search every schema.
      * examples:
-        * authorities/subjects
-        * authorities/names
-        * vocabulary/graphicMaterials
-        * vocabulary/languages
+        * authorities/subjects for [Subject Headings](https://id.loc.gov/search/?q=cs:http://id.loc.gov/authorities/subjects)
+        * authorities/names for [Name Authority](https://id.loc.gov/search/?q=cs:http://id.loc.gov/authorities/names)
+        * vocabulary/graphicMaterials for [Thesaurus Graphic Materials](https://id.loc.gov/search/?q=cs:http://id.loc.gov/vocabulary/graphicMaterials)
+        * vocabulary/languages for [MARC Languages](https://id.loc.gov/search/?q=cs:http://id.loc.gov/vocabulary/languages)
 
 ### Mask options
 
