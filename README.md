@@ -29,7 +29,7 @@ As defined in `manifest.yml` this datatype can be configured:
     * Check the URL. It should look like this https://id.loc.gov/search/?q=cs:http://id.loc.gov/vocabulary/graphicMaterials
     * Everything after http://id.loc.gov/ in the q parameter is the schema. In this example the schema would be **vocabulary/graphicMaterials**
 
-* Limits the search to entries that are part of this schema. If not Schema is set, the plugin will search every schema.
+* Limits the search to entries that are part of this schema. If no Schema is set, the plugin will search every schema.
      * examples:
         * authorities/subjects for [Subject Headings](https://id.loc.gov/search/?q=cs:http://id.loc.gov/authorities/subjects)
         * authorities/names for [Name Authority](https://id.loc.gov/search/?q=cs:http://id.loc.gov/authorities/names)
