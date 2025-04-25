@@ -24,15 +24,17 @@ As defined in `manifest.yml` this datatype can be configured:
 
 ### Schema options
 
-* which loc-vocabularys are offered for search. One or multiple of
-    * aat
-    * tgn
-    * ulan
-* starting point for searching within a hierarchical vocabulary. Limits the search to entries that are children of this node, including all of its children and grandchildren.
+* Which LOC-Schema is searched. Available schemas can be found [on the LOC site](https://id.loc.gov/search/).
+    * Select a Scheme on the left side
+    * Check the URL. It should look like this https://id.loc.gov/search/?q=cs:http://id.loc.gov/vocabulary/graphicMaterials
+    * Everything after http://id.loc.gov/ in the q parameter is the schema
+
+* Limits the search to entries that are part of this schema. If not Schema is set, the plugin will search every schema.
      * examples:
-        * aat:300194567
-        * aat:300312045
-        * tgn:7000084
+        * authorities/subjects
+        * authorities/names
+        * vocabulary/graphicMaterials
+        * vocabulary/languages
 
 ### Mask options
 
@@ -52,10 +54,10 @@ As defined in `manifest.yml` this datatype can be configured:
     * easydb-standard
 
 ## updater
-Note: The automatic nightly updater is implemented and can be configured in the baseconfig. You need to enable the "custom-data-type"-update-service globally too.
+Note: The automatic updater is implemented and can be configured in the baseconfig. You need to enable the "custom-data-type"-update-service globally too.
 
 
 
 ## sources
 
-The source code of this plugin is managed in a git repository at <https://github.com/programmfabrik/easydb-custom-data-type-loc>. Please use [the issue tracker](https://github.com/programmfabrik/easydb-custom-data-type-loc/issues) for bug reports and feature requests!
+The source code of this plugin is managed in a git repository at <https://github.com/programmfabrik/easydb-custom-data-type-loc>.
