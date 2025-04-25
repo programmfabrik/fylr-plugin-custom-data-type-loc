@@ -46,8 +46,6 @@ As defined in `manifest.yml` this datatype can be configured:
     * Preferred label of the linked record
 * conceptURI
     * URI to linked record
-* conceptGeoJSON
-    * geoJSON, if given in places 
 * _fulltext
     * easydb-fulltext
 * _standard
