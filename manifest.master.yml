@@ -6,8 +6,8 @@ plugin:
     de-DE: LoC-Verknüpfung
     en-US: LoC-Referencing
   info:
-    de-DE: Stellt Verknüpfungen mit den Subject Headern der Library of Congress her.
-    en-US: Use for references to subjet headers of the Library of Congress.
+    de-DE: Stellt Verknüpfungen mit den Normdaten der Library of Congress her.
+    en-US: Use for references to authority data of the Library of Congress.
   l10n: l10n/customDataTypeLoc.csv
   webfrontend:
     url: customDataTypeLoc.js
