@@ -1,4 +1,4 @@
-class CustomDataTypeLoc extends CustomDataTypeWithCommons
+class CustomDataTypeLoc extends CustomDataTypeWithCommonsAsPlugin
 
   #######################################################################
   # return name of plugin
@@ -16,6 +16,13 @@ class CustomDataTypeLoc extends CustomDataTypeWithCommons
   supportsGeoStandard: ->
     return false
     
+
+  #######################################################################
+  # configure used facet
+  getFacet: (opts) ->
+    opts.field = @
+    new CustomDataTypeLocFacet(opts)
+
   #######################################################################
   # get frontend-language
   getFrontendLanguage: () ->
