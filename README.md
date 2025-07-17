@@ -61,4 +61,4 @@ Note: The automatic updater is implemented and can be configured in the baseconf
 
 ## sources
 
-The source code of this plugin is managed in a git repository at <https://github.com/programmfabrik/easydb-custom-data-type-loc>.
+The source code of this plugin is managed in a git repository at <https://github.com/programmfabrik/fylr-plugin-custom-data-type-loc>.

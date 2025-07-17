@@ -37,7 +37,7 @@ class CustomDataTypeLoc extends CustomDataTypeWithCommonsAsPlugin
     desiredLanguage
     
   #######################################################################
-  # get frontend-language
+  # build url and fix missing slashes
   getUrl: (schema) ->
     url = location.protocol + '//id.loc.gov'
     if !schema
