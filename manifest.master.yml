@@ -24,6 +24,8 @@ custom_types:
         type: text
       conceptURI:
         type: text
+      facetTerm:
+        type: text_l10n
     config:
       schema:
         - name: schema
