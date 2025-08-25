@@ -47,6 +47,18 @@ function getConfigFromAPI() {
   });
 }
 
+function isInTimeRange(currentHour, fromHour, toHour) {
+  if (fromHour === toHour) {
+    return true;
+  }
+
+  if (fromHour < toHour) { // same day
+    return currentHour >= fromHour && currentHour < toHour;
+  } else { // through the night
+    return currentHour >= fromHour || currentHour < toHour;
+  }
+}
+
 function uriToSuggestUrl(uri) {
   const uriParts = uri.split('/');
   const path = uriParts.slice(3, -1).join('/');
@@ -232,7 +244,7 @@ outputErr = (err2) => {
       const now = new Date();
       const hour = now.getHours();
       // check if hours do not match
-      if (hour < loc_config.from_time && hour >= loc_config.to_time) {
+      if (!isInTimeRange(hour, loc_config.from_time, loc_config.to_time)) {
         // exit if hours do not match
         outputData({
           "state": {
