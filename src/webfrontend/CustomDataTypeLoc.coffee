@@ -47,7 +47,7 @@ class CustomDataTypeLoc extends CustomDataTypeWithCommonsAsPlugin
   #######################################################################
   # build url and fix missing slashes
   getUrl: (schema) ->
-    url = location.protocol + '//id.loc.gov'
+    url = 'https://id.loc.gov'
     if !schema
       return url + '/suggest2'
 
