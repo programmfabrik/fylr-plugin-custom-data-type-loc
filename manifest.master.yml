@@ -6,15 +6,17 @@ plugin:
     de-DE: LoC-Verknüpfung
     en-US: LoC-Referencing
   info:
-    de-DE: Stellt Verknüpfungen mit den Normdaten der Library of Congress her.
-    en-US: Use for references to authority data of the Library of Congress.
+    de-DE: |
+      Ergänzt fylr um einen Feldtyp, mit dem sich Datensätze mit Normdaten der [Library of Congress](https://id.loc.gov/) verknüpfen lassen. Standardmäßig werden die LC Subject Headings durchsucht; das Zielvokabular ist jedoch konfigurierbar – etwa Namensnormdaten, der Thesaurus for Graphic Materials oder die MARC-Sprachen. Redakteure wählen einen Eintrag aus den Autocomplete-Vorschlägen im Maskenfeld, und ein Updater kann verknüpfte Einträge aktuell halten.
+    en-US: |
+      Adds a custom data type for linking records to authority data published by the [Library of Congress](https://id.loc.gov/). By default it searches LC Subject Headings, but the target scheme is configurable — for example Name Authorities, the Thesaurus for Graphic Materials, or MARC Languages. Editors pick an entry from autocomplete suggestions in a mask field, and an updater can keep linked entries in sync.
   l10n: l10n/customDataTypeLoc.csv
   webfrontend:
     url: customDataTypeLoc.js
     css: customDataTypeLoc.css
     dependencies:
       - commons-library
-    
+
 base_url_prefix: "webfrontend"
 
 custom_types:
@@ -80,9 +82,9 @@ base_config:
         default: 4
         min: 0
         max: 24
-        position: 2 
+        position: 2
       custom_expires_days:
         type: int
         min: 1
         default: 1
-        position: 3        
+        position: 3
