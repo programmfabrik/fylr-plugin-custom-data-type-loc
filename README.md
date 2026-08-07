@@ -12,7 +12,7 @@ The Plugins uses <https://id.loc.gov/authorities/subjects/suggest> for the autoc
 
 ## installation
 
-The latest version of this plugin can be found [here](https://github.com/programmfabrik/fylr-plugin-custom-data-type-loc/releases/latest/download/customDataTypeLoc.zip).
+The latest version of this plugin can be found [here](https://github.com/programmfabrik/fylr-plugin-custom-data-type-loc/releases/latest/download/fylr-plugin-custom-data-type-loc.zip).
 
 The ZIP can be downloaded and installed using the plugin manager, or used directly (recommended).
 
