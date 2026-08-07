@@ -1,0 +1,28 @@
+# Build configuration for fylr-build-plugin — the explicit build description.
+# Delivered files are listed here; "check" (runs with every build) warns when
+# a manifest reference is missing from the build folder.
+# All features: https://github.com/programmfabrik/fylr-build-plugin
+#
+# customDataTypeLoc.zip is the name this plugin has always published. fylr updates a
+# url plugin by re-fetching the url it stored at install time, so that name is
+# kept as an alias beside the repository-named asset — without it every
+# existing installation would stop updating, silently.
+
+server:
+  install:
+  - l10n/customDataTypeLoc.csv
+webfrontend:
+  coffee1:
+  - webfrontend/CustomDataTypeLoc.coffee
+  - webfrontend/CustomDataTypeLocFacet.coffee
+  - webfrontend/LocUtil.coffee
+  install:
+  - webfrontend/customDataTypeLoc.css
+build:
+  bundles:
+  - out: updater/LocUpdater.js
+    sources:
+    - src/updater/LocUpdater.js
+    - webfrontend/LocUtil.coffee
+  zip_aliases:
+  - customDataTypeLoc.zip
