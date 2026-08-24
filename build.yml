@@ -11,18 +11,23 @@
 server:
   install:
   - l10n/customDataTypeLoc.csv
+  # assembled server-side files, sources in the order written
+  bundles:
+    - out: updater/LocUpdater.js
+      sources:
+      - src/updater/LocUpdater.js
+      - webfrontend/LocUtil.coffee
 webfrontend:
-  coffee1:
-  - webfrontend/CustomDataTypeLoc.coffee
-  - webfrontend/CustomDataTypeLocFacet.coffee
-  - webfrontend/LocUtil.coffee
+  # assembled into plugin.webfrontend.url, in this order:
+  # .coffee is compiled (CoffeeScript 1.x), .scss compiled,
+  # anything else taken verbatim
+  bundles:
+    - sources:
+        - webfrontend/CustomDataTypeLoc.coffee
+        - webfrontend/CustomDataTypeLocFacet.coffee
+        - webfrontend/LocUtil.coffee
   install:
   - webfrontend/customDataTypeLoc.css
-build:
-  bundles:
-  - out: updater/LocUpdater.js
-    sources:
-    - src/updater/LocUpdater.js
-    - webfrontend/LocUtil.coffee
-  zip_aliases:
-  - customDataTypeLoc.zip
+
+zip_aliases:
+- customDataTypeLoc.zip
